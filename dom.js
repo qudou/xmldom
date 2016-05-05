@@ -494,6 +494,7 @@ function _removeChild(parentNode,child){
 	}else{
 		parentNode.lastChild = previous;
 	}
+	child.parentNode = null;
 	_onUpdateChild(parentNode.ownerDocument,parentNode);
 	return child;
 }
