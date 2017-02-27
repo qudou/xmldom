@@ -147,7 +147,7 @@ function parse(source,defaultNSMapCopy,entityMap,domBuilder,errorHandler){
 				if(!el.closed && fixSelfClosed(source,end,el.tagName,closeMap)){
 					el.closed = true;
 					if(!entityMap.nbsp){
-						errorHandler.warning('unclosed xml attribute');
+						errorHandler.warning('unclosed xml attribute, tagName: ' + el.tagName);
 					}
 				}
 				appendElement(el,domBuilder,parseStack);
